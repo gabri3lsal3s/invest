@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Junho 2025 - Análise Quantitativa e Fundamentalista</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                <div class="flex items-center">
+                    <div class="ml-4">
+                        <h1 class="text-xl md:text-2xl font-bold text-gray-900">Relatório Junho 2025</h1>
+                        <p class="text-xs md:text-sm text-gray-500">Relatório Mensal de Alocação</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2 md:space-x-4">
+                    <span class="hidden sm:inline text-xs md:text-sm text-gray-500">Período: Junho de 2025</span>
+                    <button id="printBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-3 md:px-4 py-2 rounded-lg text-xs md:text-sm font-medium">
+                        <i class="fas fa-print mr-1 md:mr-2"></i>
+                        <span class="hidden sm:inline">Imprimir</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-8 py-4">
+                <a href="index.html" class="text-gray-500 hover:text-gray-700 text-sm font-medium">
+                    <i class="fas fa-home mr-1"></i>Hub
+                </a>
+                <a href="relatorio-2025-1.html" class="text-gray-500 hover:text-gray-700 text-sm font-medium">
+                    <i class="fas fa-chart-line mr-1"></i>Relatório 2025.1
+                </a>
+                <a href="relatorio-junho.html" class="text-blue-600 font-medium text-sm">
+                    <i class="fas fa-calendar-alt mr-1"></i>Relatório Junho
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Sumário Executivo -->
+        <section class="mb-8">
+            <div class="bg-white rounded-lg shadow-sm border p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">Sumário Executivo</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-r from-green-500 to-green-600 text-white p-4 rounded-lg">
+                        <div class="text-2xl font-bold">1,46%</div>
+                        <div class="text-sm opacity-90">Rentabilidade Mensal</div>
+                    </div>
+                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-lg">
+                        <div class="text-2xl font-bold">R$ 2.810</div>
+                        <div class="text-sm opacity-90">Aporte do Mês</div>
+                    </div>
+                    <div class="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-4 rounded-lg">
+                        <div class="text-2xl font-bold">8,63%</div>
+                        <div class="text-sm opacity-90">Rentabilidade Anual</div>
+                    </div>
+                </div>
+                <div class="mt-6 text-gray-700 leading-relaxed">
+                    <p>O mês de junho de 2025 foi marcado por uma <strong>performance excepcional</strong> da carteira de investimentos, com destaque para o aporte de <strong>R$ 2.810,61</strong> distribuído estrategicamente entre novos ativos (AUVP11, PRIO3, SLCE3) e ETFs internacionais. A carteira consolidada superou consistentemente os benchmarks, registrando <strong>1,46% no mês (133% do CDI)</strong> contra 1,10% do CDI e 0,67% da poupança, acumulando <strong>8,63% no ano versus 6,42% do CDI</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aportes do Mês -->
+        <section class="mb-8">
+            <div class="bg-white rounded-lg shadow-sm border p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-6">1. Aportes do Mês</h2>
+                <div class="bg-green-50 border-l-4 border-green-400 p-4 mb-6">
+                    <h3 class="font-medium text-green-900 mb-2">Aporte Total: R$ 2.810,61</h3>
+                    <p class="text-sm text-green-800">O dinheiro investido veio dos resgates de dois ativos de renda fixa que chegaram ao vencimento no final do mês e dos proventos recebidos.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-gray-900 mb-3">Ativos Nacionais</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>AUVP11</span>
+                                <span class="font-medium">ETF Fundamentalista</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>PRIO3</span>
+                                <span class="font-medium">Petróleo e Gás</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>SLCE3</span>
+                                <span class="font-medium">Agronegócio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-gray-900 mb-3">Ativos Internacionais</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>VOO</span>
+                                <span class="font-medium">S&P 500</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>MCHI</span>
+                                <span class="font-medium">Mercado Chinês</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>GLD</span>
+                                <span class="font-medium">Ouro</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>INDA</span>
+                                <span class="font-medium">Índia</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>EWW</span>
+                                <span class="font-medium">México</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ativos na Carteira -->
+        <section class="mb-8">
+            <div class="bg-white rounded-lg shadow-sm border p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-6">2. Ativos na Carteira</h2>
+                
+                <div class="mb-6">
+                    <p class="text-gray-700 mb-4">Com o objetivo de aumentar a diversificação na carteira entre setores e facilitar o aporte mensal dos dividendos foram analisados três ativos para a inclusão na carteira: SLCE, PRIO e o ETF nacional AUVP11.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-blue-900 mb-3">Ações Brasileiras</h4>
+                        <div class="space-y-1 text-sm text-blue-800">
+                            <div>• Banco do Brasil</div>
+                            <div>• Banco ABC</div>
+                            <div>• Sanepar</div>
+                            <div>• Klabin</div>
+                            <div>• WEG</div>
+                            <div>• CPFL Energia</div>
+                            <div>• Porto Seguro</div>
+                            <div>• EMBR3 (Embraer)</div>
+                            <div>• MDIA3 (M. Dias Branco)</div>
+                            <div>• VIVA3 (Vivara S.A.)</div>
+                            <div>• SLCE3 (SLC Agrícola)</div>
+                            <div>• PRIO3 (PRIO)</div>
+                        </div>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-green-900 mb-3">Internacional</h4>
+                        <div class="space-y-1 text-sm text-green-800">
+                            <div>• REITs Americanos (O, VICI)</div>
+                            <div>• MCHI (ETF China)</div>
+                            <div>• GLD (ETF Ouro)</div>
+                            <div>• VOO (S&P 500)</div>
+                            <div>• BITB (Bitcoin)</div>
+                            <div>• ARGT (Argentina)</div>
+                            <div>• EWW (México)</div>
+                            <div>• INDA (Índia)</div>
+                        </div>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-purple-900 mb-3">Fundos Imobiliários</h4>
+                        <div class="space-y-1 text-sm text-purple-800">
+                            <div>• GGRC11</div>
+                            <div>• LVBI11</div>
+                            <div>• XPML11</div>
+                            <div>• HGLG11</div>
+                            <div>• VISC11</div>
+                            <div>• ALZR11</div>
+                            <div>• NEWL11</div>
+                            <div>• RZTR11</div>
+                            <div>• TGAR11</div>
+                            <div>• GARE11</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Atualizações dos Ativos -->
+        <section class="mb-8">
+            <div class="bg-white rounded-lg shadow-sm border p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-6">3. Atualizações dos Ativos</h2>
+                
+                <div class="mb-6">
+                    <p class="text-gray-700 mb-4">O mês de junho de 2025 foi marcado por significativas distribuições de dividendos e juros sobre capital próprio (JCP) no mercado brasileiro, com destaque para empresas como Banco ABC Brasil (R$ 261,3 milhões em JCP), WEG (R$ 394,6 milhões em JCP), CPFL Energia (R$ 900 milhões em dividendos) e grandes anúncios corporativos como o acordo de US$ 4 bilhões da Embraer com a SAS para venda de 45 jatos E195-E2.</p>
+                </div>
+
+                <!-- SLCE -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-medium text-gray-900 mb-4">3.1. SLCE (SLC Agrícola)</h3>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-medium text-green-900 mb-3">Perfil da Empresa</h4>
+                                <p class="text-sm text-green-800 mb-3">Fundada em 1977, é uma das maiores produtoras de commodities agrícolas do Brasil, operando cerca de 733 mil hectares em 23 unidades distribuídas por sete estados.</p>
+                                <div class="space-y-1 text-sm text-green-800">
+                                    <div><strong>Foco:</strong> Soja, algodão e milho</div>
+                                    <div><strong>Modelo:</strong> Produção em larga escala + tecnologia</div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-green-900 mb-3">Resultados 1T25</h4>
+                                <div class="space-y-2 text-sm text-green-800">
+                                    <div class="flex justify-between">
+                                        <span>Lucro Líquido:</span>
+                                        <span class="font-medium">R$ 510,7M (+123%)</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Receita Líquida:</span>
+                                        <span class="font-medium">R$ 2,3B (+19%)</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>EBITDA:</span>
+                                        <span class="font-medium">R$ 943,6M (+34%)</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Margem EBITDA:</span>
+                                        <span class="font-medium">40,5%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRIO -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-medium text-gray-900 mb-4">3.2. PRIO</h3>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-medium text-blue-900 mb-3">Perfil da Empresa</h4>
+                                <p class="text-sm text-blue-800 mb-3">Maior petroleira privada independente do Brasil, especializada na aquisição, reabilitação e operação eficiente de campos maduros de petróleo e gás.</p>
+                                <div class="space-y-1 text-sm text-blue-800">
+                                    <div><strong>Foco:</strong> Bacia de Campos (RJ)</div>
+                                    <div><strong>Ativos:</strong> Polvo, Frade, Manati, Peregrino</div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-blue-900 mb-3">Indicadores 2025</h4>
+                                <div class="space-y-2 text-sm text-blue-800">
+                                    <div class="flex justify-between">
+                                        <span>ROE:</span>
+                                        <span class="font-medium">42,6%</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Margem Líquida:</span>
+                                        <span class="font-medium">72,6%</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>P/L:</span>
+                                        <span class="font-medium">3,35</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Dívida/EBITDA:</span>
+                                        <span class="font-medium">1,84</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AUVP11 -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-medium text-gray-900 mb-4">3.3. AUVP11</h3>
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-medium text-purple-900 mb-3">Perfil do ETF</h4>
+                                <p class="text-sm text-purple-800 mb-3">Primeiro ETF 100% fundamentado em critérios fundamentalistas no Brasil, lançado em 25 de junho de 2025.</p>
+                                <div class="space-y-1 text-sm text-purple-800">
+                                    <div><strong>Índice:</strong> Teva Ações Fundamentos (IAFD)</div>
+                                    <div><strong>Gestor:</strong> BTG Pactual Asset Management</div>
+                                    <div><strong>Taxa:</strong> 0,75% ao ano</div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-purple-900 mb-3">Critérios de Seleção</h4>
+                                <div class="space-y-2 text-sm text-purple-800">
+                                    <div>• Lucros recorrentes</div>
+                                    <div>• ROE > 10%</div>
+                                    <div>• Margem líquida > 8%</div>
+                                    <div>• Dívida líquida < 3×EBIT</div>
+                                    <div>• Free float > 15%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resultados da Carteira -->
+        <section class="mb-8">
+            <div class="bg-white rounded-lg shadow-sm border p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-6">4. Resultados da Carteira</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-blue-900 mb-3">4.1. Carteira de Ações</h4>
+                        <div class="space-y-2 text-sm text-blue-800">
+                            <div class="flex justify-between">
+                                <span>Resultado:</span>
+                                <span class="font-medium">8,58%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Aumento:</span>
+                                <span class="font-medium">+2,49%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Yield on Cost:</span>
+                                <span class="font-medium">1,85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-green-900 mb-3">4.2. Carteira de FIIs</h4>
+                        <div class="space-y-2 text-sm text-green-800">
+                            <div class="flex justify-between">
+                                <span>Resultado:</span>
+                                <span class="font-medium">6,38%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Sem dividendos:</span>
+                                <span class="font-medium">-0,63%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Proventos recebidos:</span>
+                                <span class="font-medium">R$ 211,27</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-purple-900 mb-3">4.3. Carteira de Renda Fixa</h4>
+                        <div class="space-y-2 text-sm text-purple-800">
+                            <div class="flex justify-between">
+                                <span>Rentabilidade:</span>
+                                <span class="font-medium">1,01%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Consolidado:</span>
+                                <span class="font-medium">13,62%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>% do CDI:</span>
+                                <span class="font-medium">98,06%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consolidado -->
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-medium text-gray-900 mb-3">4.4. Consolidado de Toda a Carteira</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-medium text-gray-700 mb-2">Performance Mensal</h5>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between">
+                                    <span>Carteira:</span>
+                                    <span class="font-medium text-green-600">1,46% (133% do CDI)</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>CDI:</span>
+                                    <span class="font-medium">1,10%</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Poupança:</span>
+                                    <span class="font-medium">0,67%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-gray-700 mb-2">Performance Anual</h5>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between">
+                                    <span>Carteira:</span>
+                                    <span class="font-medium text-green-600">8,63%</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>CDI:</span>
+                                    <span class="font-medium">6,42%</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>IBOV:</span>
+                                    <span class="font-medium">15,44%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Análise de Risco -->
+        <section class="mb-8">
+            <div class="bg-white rounded-lg shadow-sm border p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-6">5. Análise de Risco</h2>
+                
+                <div class="mb-6">
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                        <h4 class="font-medium text-yellow-900 mb-2">Índice de Sharpe Anual: 0,50</h4>
+                        <p class="text-sm text-yellow-800">O retorno obtido está apenas moderadamente acima do CDI, considerando o risco assumido. O consolidado negativo (-0,45) reforça que, no período total, o risco não está sendo bem compensado pelo retorno.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-red-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-red-900 mb-3">Pontos de Atenção</h4>
+                        <ul class="text-sm text-red-800 space-y-2">
+                            <li>• Betas muito altos em ITSA4, BITB, VIVA3 e SAPR4</li>
+                            <li>• Exposição elevada a renda fixa pós-fixada</li>
+                            <li>• Necessidade de limitar exposição a CDBs de bancos médios</li>
+                            <li>• Priorização de ativos mais líquidos</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-green-900 mb-3">Oportunidades de Melhoria</h4>
+                        <ul class="text-sm text-green-800 space-y-2">
+                            <li>• Redução da concentração em ativos de alto beta</li>
+                            <li>• Diversificação setorial e geográfica</li>
+                            <li>• Reforço de ativos de renda fixa e proteção</li>
+                            <li>• Expansão da diversificação internacional</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Objetivos para Julho -->
+        <section class="mb-8">
+            <div class="bg-white rounded-lg shadow-sm border p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-6">6. Objetivos para Julho</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-400">
+                        <h4 class="font-medium text-red-900 mb-3">1. Redução de Alto Beta</h4>
+                        <ul class="text-sm text-red-800 space-y-2">
+                            <li>• Diminuir exposição em ativos com beta > 3,0</li>
+                            <li>• ITSA4, BITB, VIVA3, SAPR4, ABCB4, NEWL11</li>
+                            <li>• Reduzir volatilidade sem comprometer retorno</li>
+                        </ul>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <h4 class="font-medium text-blue-900 mb-3">2. Diversificação</h4>
+                        <ul class="text-sm text-blue-800 space-y-2">
+                            <li>• Aumentar setores defensivos</li>
+                            <li>• Expandir diversificação internacional</li>
+                            <li>• ETFs de mercados desenvolvidos e emergentes</li>
+                            <li>• Reduzir concentração em setores cíclicos</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-400">
+                        <h4 class="font-medium text-green-900 mb-3">3. Proteção</h4>
+                        <ul class="text-sm text-green-800 space-y-2">
+                            <li>• Aumentar Tesouro IPCA+ e Selic</li>
+                            <li>• Melhorar Sharpe ao reduzir volatilidade</li>
+                            <li>• Proteção em cenários adversos</li>
+                            <li>• Ativos de baixa correlação</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="text-center text-sm text-gray-500">
+                <p>Relatório Mensal de Alocação - Junho de 2025</p>
+                <p class="mt-1">Gerado em: <span id="currentDate"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
