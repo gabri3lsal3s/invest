@@ -1,13 +1,22 @@
 // Script principal para o relatório financeiro
 
+// Aguardar que tanto o DOM quanto o Chart.js estejam carregados
+function waitForChartJS() {
+    if (typeof Chart !== 'undefined') {
+        // Inicializar componentes
+        initializeDate();
+        initializeCharts();
+        initializePrintFunction();
+        initializeAnimations();
+        initializeTooltips();
+        initializeResponsiveTables();
+    } else {
+        setTimeout(waitForChartJS, 50);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar componentes
-    initializeDate();
-    initializeCharts();
-    initializePrintFunction();
-    initializeAnimations();
-    initializeTooltips();
-    initializeResponsiveTables();
+    waitForChartJS();
 });
 
 // Função para inicializar a data atual
@@ -17,7 +26,18 @@ function initializeDate() {
         month: 'long',
         day: 'numeric'
     });
-    document.getElementById('currentDate').textContent = currentDate;
+    
+    // Verificar se o elemento currentDate existe antes de tentar acessá-lo
+    const currentDateElement = document.getElementById('currentDate');
+    if (currentDateElement) {
+        currentDateElement.textContent = currentDate;
+    }
+    
+    // Verificar se o elemento currentDateFooter existe também
+    const currentDateFooterElement = document.getElementById('currentDateFooter');
+    if (currentDateFooterElement) {
+        currentDateFooterElement.textContent = currentDate;
+    }
 }
 
 // Função para inicializar gráficos
