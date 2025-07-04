@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composição da Carteira - Relatório Financeiro</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+</head>
+    <body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-blue-600 hover:text-blue-800 mr-4">
+                        <i class="fas fa-arrow-left"></i> <span class="hidden sm:inline">Voltar</span>
+                    </a>
+                    <div>
+                        <h1 class="text-xl md:text-2xl font-bold text-gray-900">Composição da Carteira</h1>
+                        <p class="text-xs md:text-sm text-gray-500">Análise detalhada da alocação de ativos</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Distribuição por Classes de Ativos -->
+        <section class="mb-8">
+            <div class="bg-white rounded-lg shadow-sm border p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-6">1.1 Distribuição por Classes de Ativos</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Alocação Atual -->
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-4">Alocação Atual</h3>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center p-3 bg-white rounded border">
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 bg-blue-500 rounded mr-3"></div>
+                                        <span class="text-sm text-gray-600">Ações Brasileiras e Internacionais</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="font-bold text-blue-900">45%</div>
+                                        <div class="text-xs text-gray-500">R$ 37.657,41</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex justify-between items-center p-3 bg-white rounded border">
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 bg-green-500 rounded mr-3"></div>
+                                        <span class="text-sm text-gray-600">Renda Fixa</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="font-bold text-green-900">30%</div>
+                                        <div class="text-xs text-gray-500">R$ 25.104,94</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex justify-between items-center p-3 bg-white rounded border">
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 bg-purple-500 rounded mr-3"></div>
+                                        <span class="text-sm text-gray-600">Fundos Imobiliários</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="font-bold text-purple-900">25%</div>
+                                        <div class="text-xs text-gray-500">R$ 20.920,78</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4 pt-4 border-t border-gray-200">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium text-gray-900">Total</span>
+                                    <div class="text-right">
+                                        <div class="font-bold text-gray-900">100%</div>
+                                        <div class="text-xs text-gray-500">R$ 83.683,13</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gráfico de Pizza -->
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-4">Visualização</h3>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <canvas id="compositionChart" width="300" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Principais Ativos e Concentração -->
+        <section class="mb-8">
+            <div class="bg-white rounded-lg shadow-sm border p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-6">1.2 Principais Ativos e Concentração</h2>
+                
+                <div class="mb-6">
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                        <p class="text-sm text-yellow-800">
+                            Os <strong>cinco maiores ativos representam 51,5%</strong> da carteira, 
+                            indicando concentração moderadamente elevada.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tabela de Principais Ativos -->
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rank</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ativo</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Peso</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Valor</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Descrição</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="text-sm font-medium text-gray-900">PSSA3</div>
+                                        <div class="ml-2 text-xs text-gray-500">Porto Seguro</div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">14,09%</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">R$ 11.790,95</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">Líder em seguros</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="badge badge-warning">Alta Concentração</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="text-sm font-medium text-gray-900">IVVB11</div>
+                                        <div class="ml-2 text-xs text-gray-500">ETF S&P 500</div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">12,07%</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">R$ 10.100,55</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">Diversificação internacional</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="badge badge-success">Core Holding</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">3</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="text-sm font-medium text-gray-900">CPFE3</div>
+                                        <div class="ml-2 text-xs text-gray-500">CPFL Energia</div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">8,98%</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">R$ 7.514,74</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">Setor elétrico regulado</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="badge badge-info">Defensivo</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">4</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="text-sm font-medium text-gray-900">WEGE3</div>
+                                        <div class="ml-2 text-xs text-gray-500">WEG</div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">8,25%</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">R$ 6.903,86</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">Equipamentos industriais</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="badge badge-info">Crescimento</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">5</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="text-sm font-medium text-gray-900">ABCB4</div>
+                                        <div class="ml-2 text-xs text-gray-500">ABC Brasil</div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">8,12%</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">R$ 6.795,07</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">Banco high grade</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="badge badge-success">Qualidade</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Análise de Concentração -->
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-400">
+                        <div class="text-2xl font-bold text-red-900">51,5%</div>
+                        <div class="text-sm text-red-700">Top 5 ativos</div>
+                        <div class="text-xs text-red-600 mt-1">Concentração elevada</div>
+                    </div>
+                    <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                        <div class="text-2xl font-bold text-yellow-900">14,09%</div>
+                        <div class="text-sm text-yellow-700">Maior posição (PSSA3)</div>
+                        <div class="text-xs text-yellow-600 mt-1">Acima do recomendado</div>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-400">
+                        <div class="text-2xl font-bold text-green-900">48,5%</div>
+                        <div class="text-sm text-green-700">Restante da carteira</div>
+                        <div class="text-xs text-green-600 mt-1">Bem distribuído</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diversificação Setorial e Geográfica -->
+        <section class="mb-8">
+            <div class="bg-white rounded-lg shadow-sm border p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-6">1.3 Diversificação Setorial e Geográfica</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Setores Representados -->
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-4">Setores Representados</h3>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center p-2 bg-white rounded border">
+                                    <span class="text-sm text-gray-600">Serviços financeiros e seguros</span>
+                                    <span class="font-medium text-blue-600">~30%</span>
+                                </div>
+                                <div class="flex justify-between items-center p-2 bg-white rounded border">
+                                    <span class="text-sm text-gray-600">Utilities (energia elétrica)</span>
+                                    <span class="font-medium text-green-600">~15%</span>
+                                </div>
+                                <div class="flex justify-between items-center p-2 bg-white rounded border">
+                                    <span class="text-sm text-gray-600">Bens industriais</span>
+                                    <span class="font-medium text-purple-600">~12%</span>
+                                </div>
+                                <div class="flex justify-between items-center p-2 bg-white rounded border">
+                                    <span class="text-sm text-gray-600">Mercados internacionais</span>
+                                    <span class="font-medium text-orange-600">~15%</span>
+                                </div>
+                                <div class="flex justify-between items-center p-2 bg-white rounded border">
+                                    <span class="text-sm text-gray-600">Real estate (FIIs)</span>
+                                    <span class="font-medium text-red-600">~25%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Exposição Geográfica -->
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-4">Exposição Geográfica</h3>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center p-2 bg-white rounded border">
+                                    <span class="text-sm text-gray-600">Brasil</span>
+                                    <span class="font-medium text-green-600">~85%</span>
+                                </div>
+                                <div class="flex justify-between items-center p-2 bg-white rounded border">
+                                    <span class="text-sm text-gray-600">Estados Unidos</span>
+                                    <span class="font-medium text-blue-600">~10%</span>
+                                </div>
+                                <div class="flex justify-between items-center p-2 bg-white rounded border">
+                                    <span class="text-sm text-gray-600">Mercados emergentes</span>
+                                    <span class="font-medium text-orange-600">~3%</span>
+                                </div>
+                                <div class="flex justify-between items-center p-2 bg-white rounded border">
+                                    <span class="text-sm text-gray-600">Commodities internacionais</span>
+                                    <span class="font-medium text-purple-600">~2%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Análise da Diversificação -->
+                <div class="mt-6 bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+                    <h4 class="font-medium text-blue-900 mb-2">Análise da Diversificação:</h4>
+                    <ul class="text-sm text-blue-800 space-y-1">
+                        <li>• <strong>Setorial:</strong> Boa diversificação com exposição a 5 setores principais</li>
+                        <li>• <strong>Geográfica:</strong> Concentração no Brasil (85%), mas com exposição internacional</li>
+                        <li>• <strong>Risco:</strong> Maior exposição a serviços financeiros (30%)</li>
+                        <li>• <strong>Oportunidade:</strong> Possibilidade de aumentar diversificação internacional</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparação com Índice AUVP Fundamentalista -->
+        <section class="mb-8">
+            <div class="bg-white rounded-lg shadow-sm border p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-6">1.4 Comparação com Índice AUVP Fundamentalista (IAFD)</h2>
+                
+                <div class="mb-6">
+                    <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <h3 class="font-medium text-purple-900 mb-2">AUVP11 (3,25% da carteira)</h3>
+                        <p class="text-sm text-purple-800">
+                            Replica o IAFD, focando empresas com ROE > 10%, Margem líquida > 8%, 
+                            Dívida líquida < 3x EBIT
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Similaridades -->
+                    <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-400">
+                        <h4 class="font-medium text-green-900 mb-3">Similaridades Identificadas</h4>
+                        <ul class="text-sm text-green-800 space-y-2">
+                            <li>• Sobreposição significativa com critérios fundamentalistas</li>
+                            <li>• CPFE3: Setor regulado, receita recorrente</li>
+                            <li>• PSSA3: Líder em seguros, ROE sólido</li>
+                            <li>• ABCB4: Banco high grade, baixo risco</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Desvios -->
+                    <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                        <h4 class="font-medium text-yellow-900 mb-3">Desvios Relevantes</h4>
+                        <ul class="text-sm text-yellow-800 space-y-2">
+                            <li>• Maior exposição a FIIs (25% vs 0%)</li>
+                            <li>• Maior exposição a renda fixa (30% vs 0%)</li>
+                            <li>• Perfil mais conservador que o índice</li>
+                            <li>• Foco em preservação de capital</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Conclusão -->
+                <div class="mt-6 bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-medium text-gray-900 mb-2">Conclusão:</h4>
+                    <p class="text-sm text-gray-700">
+                        A carteira apresenta <strong>sobreposição significativa</strong> com critérios fundamentalistas do IAFD, 
+                        especialmente em CPFE3, PSSA3 e bancos sólidos como ABCB4. Os <strong>desvios relevantes</strong> 
+                        refletem um perfil mais conservador, com maior exposição a FIIs e renda fixa comparado ao índice 
+                        puramente acionário.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="text-center text-sm text-gray-500">
+                <p>Composição da Carteira - Relatório de Investimentos</p>
+                <p class="mt-1">Período: Janeiro a Junho de 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../script.js"></script>
+    <script>
+        // Gráfico de composição específico para esta página
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('compositionChart');
+            if (ctx) {
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Ações Brasileiras e Internacionais', 'Renda Fixa', 'Fundos Imobiliários'],
+                        datasets: [{
+                            data: [45, 30, 25],
+                            backgroundColor: [
+                                '#3b82f6', // Azul
+                                '#10b981', // Verde
+                                '#8b5cf6'  // Roxo
+                            ],
+                            borderWidth: 2,
+                            borderColor: '#ffffff'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    padding: 20,
+                                    usePointStyle: true,
+                                    font: {
+                                        size: 12
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const label = context.label || '';
+                                        const value = context.parsed;
+                                        return `${label}: ${value}%`;
+                                    }
+                                }
+                            }
+                        },
+                        cutout: '60%'
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
