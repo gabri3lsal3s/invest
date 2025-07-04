@@ -17,13 +17,11 @@ Este projeto apresenta um site responsivo para visualização de relatórios fin
 
 ```
 Relatório/
-├── index.html                 # Página principal
+├── index.html                 # Página principal (hub de navegação)
+├── relatorio-2025-1.html      # Relatório 2025.1
+├── relatorio-junho.html       # Relatório Junho
 ├── styles.css                 # Estilos personalizados
 ├── script.js                  # Funcionalidades JavaScript
-├── pages/                     # Páginas específicas
-│   ├── analise-fundamentalista.html
-│   ├── desempenho-historico.html
-│   └── recomendacoes.html
 ├── README.md                  # Este arquivo
 └── Análise Quantitativa e Fundamentalista da Carteira.md  # Relatório original
 ```
@@ -34,7 +32,8 @@ Relatório/
 ```bash
 # Abra o arquivo index.html em seu navegador
 # Ou use um servidor local:
-python -m http.server 8000
+python -m 
+http.server 8000
 # Acesse: http://localhost:8000
 ```
 
@@ -49,18 +48,18 @@ python -m http.server 8000
 - **Gráficos Interativos**: Hover sobre gráficos para detalhes
 - **Tabelas Responsivas**: Scroll horizontal em dispositivos móveis
 - **Filtros**: Use as funcionalidades de busca e ordenação
+- **Rodapé sem data automática**: O rodapé do relatório de junho não exibe mais a data de geração automaticamente.
 
 ## 🎨 Componentes Principais
 
 ### 1. Header
-- Logo e título do relatório
+- Título do relatório
 - Botão de impressão
 - Navegação entre páginas
 
-### 2. Sumário Executivo
-- Métricas principais em cards destacados
-- Indicadores de performance
-- Resumo executivo
+### 2. Footer
+- Informações do relatório
+- Não exibe mais a data de geração automaticamente
 
 ### 3. Seções de Análise
 - Composição da carteira
